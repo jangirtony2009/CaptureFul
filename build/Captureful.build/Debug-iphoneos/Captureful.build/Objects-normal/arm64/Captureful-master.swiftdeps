@@ -1,0 +1,9 @@
+version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+options: "d16f62f740819282f978d43d77274670"
+build_time: [1594367011, 87402000]
+inputs:
+  "/Users/vikas.jangir/Downloads/Captureful Starter/Captureful/ViewController.swift": [1558719339, 0]
+  "/Users/vikas.jangir/Downloads/Captureful Starter/Captureful/CameraViewController.swift": [1594366500, 417895174]
+  "/Users/vikas.jangir/Downloads/Captureful Starter/Captureful/Extension+URL.swift": [1558638444, 0]
+  "/Users/vikas.jangir/Downloads/Captureful Starter/Captureful/VideoViewController.swift": [1594366906, 596078908]
+  "/Users/vikas.jangir/Downloads/Captureful Starter/Captureful/AppDelegate.swift": [1558719339, 0]

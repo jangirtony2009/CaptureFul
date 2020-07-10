@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CameraViewController" customModule="Captureful" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N4Q-mh-Gbn">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJG-ty-psc">
+                                <rect key="frame" x="167" y="742" width="80" height="80"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="DsX-xu-Ddd"/>
+                                    <constraint firstAttribute="height" constant="80" id="b18-Vu-gqB"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="capturedButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="19x-lG-v2g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTE-RY-Wvk">
+                                <rect key="frame" x="30" y="74" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="I3c-P9-rSK"/>
+                                    <constraint firstAttribute="height" constant="40" id="ifm-F5-4ep"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="thumnailButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zwk-VG-gY9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="N4Q-mh-Gbn" secondAttribute="bottom" id="3mk-ly-TGz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yJG-ty-psc" secondAttribute="bottom" constant="40" id="Ccu-SH-lO9"/>
+                            <constraint firstItem="yJG-ty-psc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GlG-dc-zQc"/>
+                            <constraint firstItem="cTE-RY-Wvk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="GsE-8M-91Y"/>
+                            <constraint firstItem="N4Q-mh-Gbn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JOb-lr-CuO"/>
+                            <constraint firstItem="N4Q-mh-Gbn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Tm4-rd-xI5"/>
+                            <constraint firstItem="cTE-RY-Wvk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="dK3-Lq-2eX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N4Q-mh-Gbn" secondAttribute="trailing" id="xae-i9-ggX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="camPreview" destination="N4Q-mh-Gbn" id="LBi-lV-8zF"/>
+                        <outlet property="capturedButton" destination="yJG-ty-psc" id="7eX-SG-kZ2"/>
+                        <outlet property="thumbnailButton" destination="cTE-RY-Wvk" id="NNP-9s-qJg"/>
+                        <segue destination="kzK-Nh-Caz" kind="presentation" identifier="ShowViewController" id="TMx-lH-L2I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="r7t-7u-Xsy">
+            <objects>
+                <viewController id="kzK-Nh-Caz" customClass="VideoViewController" customModule="Captureful" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="duM-8f-9U6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KgC-w0-yqr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qf5-Sd-8UT">
+                                <rect key="frame" x="340" y="30" width="44" height="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didMissButton:" destination="kzK-Nh-Caz" eventType="touchUpInside" id="5RL-kU-eM6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KgC-w0-yqr" firstAttribute="leading" secondItem="FEM-dI-2si" secondAttribute="leading" id="1n0-ji-dC8"/>
+                            <constraint firstItem="FEM-dI-2si" firstAttribute="trailing" secondItem="KgC-w0-yqr" secondAttribute="trailing" id="59W-FF-OV8"/>
+                            <constraint firstItem="FEM-dI-2si" firstAttribute="bottom" secondItem="KgC-w0-yqr" secondAttribute="bottom" id="DmI-ES-cSh"/>
+                            <constraint firstItem="qf5-Sd-8UT" firstAttribute="top" secondItem="FEM-dI-2si" secondAttribute="top" constant="30" id="Zvb-X8-JXE"/>
+                            <constraint firstItem="qf5-Sd-8UT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FEM-dI-2si" secondAttribute="leading" constant="10" id="doD-bF-dPc"/>
+                            <constraint firstItem="KgC-w0-yqr" firstAttribute="top" secondItem="FEM-dI-2si" secondAttribute="top" id="ewD-3h-XvE"/>
+                            <constraint firstItem="FEM-dI-2si" firstAttribute="trailing" secondItem="qf5-Sd-8UT" secondAttribute="trailing" constant="30" id="qTg-Ij-Rab"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FEM-dI-2si"/>
+                    </view>
+                    <connections>
+                        <outlet property="videoView" destination="KgC-w0-yqr" id="NMR-h0-wBq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mhe-zY-nTa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="894.20289855072474" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
